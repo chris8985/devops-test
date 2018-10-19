@@ -22,6 +22,11 @@ echo `${PACKAGE_NAME_TAG}`
 sleep 5'''
           }
         }
+        stage('job-3169') {
+          steps {
+            build(job: 'job-3169', wait: true, quietPeriod: 6)
+          }
+        }
       }
     }
   }
